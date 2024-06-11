@@ -1,0 +1,17 @@
+import type { FC } from "react";
+
+interface Props {
+  onClick: () => void;
+  text: string;
+}
+
+export const Button: FC<Props> = ({ onClick, text }) => {
+  return (
+    <button
+      onClick={onClick}
+      className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 w-[200px]"
+    >
+      {text}
+    </button>
+  );
+};
